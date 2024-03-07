@@ -1,13 +1,25 @@
-.nav-link:hover {
-    color:#1db954;
+body {
+  background-color: black;
 }
 
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 25px;
-    text-align: left;
-    background-color: #212529;
+.navbar-brand {
+  font-weight: bold;
+  font-size: x-large;
+}
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: #1ed760 !important;
+}
+
+.nav-item {
+  color: white;
+  font-size: large;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
 }
