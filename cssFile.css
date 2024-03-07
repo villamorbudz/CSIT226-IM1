@@ -152,6 +152,29 @@ main {
     background-color: #121212;
 }
 
-h1, p {
+h1, p, .registerInterface {
     font-family: Helvetica, sans-serif;
+}
+
+.registerInterface {
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.form-control {
+    height: 50px;
+}
+
+#headerInt {
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
