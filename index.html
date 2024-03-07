@@ -1,147 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Eventify | Home</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Eventify</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="AboutUsPage.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ContactUs.html">Contact Us</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          <div class="ml-auto p-2">
-            <div id="login-buttons" class="text-end">
-              <button type="button" class="btn btn-outline-light me-2" data-toggle="modal" data-target="#loginModal" onclick="updateFooter();">Login</button>
-              <button type="button" class="btn btn-warning" id="createNewUser" data-toggle="modal" data-target="#createUserModal" onclick="updateFooter();">Register</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Eventify</title>
+        <link rel="stylesheet" href="cssFile.css">
+    </head>
+
+    <body>
+        <header class="header-main bgCustom">
+            <div class="container">
+                <div class="menu" id="right-margin">
+                    <a href="index.html"><img class="logo" src="./img/logoPlaceholder.png" alt="logo.png"></a>
+                    <p class="m0 p0 b0" id="businessName">Eventify</p>
+                </div>
+
+                <div class="menu">
+                    <nav>
+                        <ul class="m0 p0">
+                            <li><a href="AboutUsPage.html" class="menu-choiceA pLR30">About Us</a></li>
+                            <li><a href="ContactUs.html" class="menu-choiceA pLR30">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu" id="left-margin">
+                    <nav>
+                        <ul class="m0 p0">
+                            <li><a href="RegisterPage.html" class="menu-choiceB pLR30">Register</a></li>
+                            <li><a href="LogInPage.html" class="menu-choiceB pLR30">Log In</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </span>
-      </div>
-    </nav>
-    
+        </header>
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="login-username">Username</label>
-                <input type="text" class="form-control" id="login-username" placeholder="Enter username">
-              </div>
-              <div class="form-group">
-                <label for="login-password">Password</label>
-                <input type="password" class="form-control" id="login-password" placeholder="Enter password">
-              </div>
-              <div class="form-group">
-                <a href="">Forgot Password?</a>
-              </div>
-            </form>
-            <div id="login-responseMsg"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-dismiss="modal" data-target="#createUserModal">Create User</button>
-            <button type="button" id="login-button" data-dismiss="modal" class="btn btn-primary" onclick="resetFooter();">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
+        <main>
+            
+        </main>
 
-    <!-- Create User Modal -->
-    <div class="modal fade" id="createUserModal" tabindex="-1" role="dialog" aria-labelledby="createUserModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="createUserModalLabel">Create User</h5>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-row">
-                <div class="col">
-                  <label for="newUser-firstName">First Name</label>
-                  <input type="text" class="form-control" id="newUser-firstName" placeholder="First name">
-                </div>
-                <div class="col">
-                  <label for="newUser-lastName">Last Name</label>
-                  <input type="text" class="form-control" id="newUser-lastName" placeholder="Last name">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="newUser-username">Username</label>
-                <input type="text" class="form-control" id="newUser-username" placeholder="Enter username">
-              </div>
-              <div class="form-group">
-                <label for="newUser-email">Email</label>
-                <input type="email" class="form-control" id="newUser-email" placeholder="example@email.com">
-              </div>
-              <div class="form-group">
-                <label for="newUser-password">Password</label>
-                <input type="password" class="form-control" id="newUser-password" placeholder="Enter password">
-              </div>
-            </form>
-            <div id="createUser-responseMSG"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-dismiss="modal" data-target="#loginModal">Back to Login</button>
-            <button type="button" id="create-new-user" data-dismiss="modal" class="btn btn-primary" onclick="resetFooter();" >Create User</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="footer" class="text-light">
-      <p id="footer-names">Fiel Louis L. Omas-as & Giles Anthony II I. Villamor</p>
-      <p>BSCS - 2</p>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-      let isLoggedin = true;
-
-      if (!isLoggedin) {
-          $('#loginModal').modal('show');
-      }
-
-      function updateFooter() {
-          $('#footer-names').text('Giles Anthony II I. Villamor');
-      }
-
-      function resetFooter() {
-          $('#footer-names').text('Fiel Louis L. Omas-as & Giles Anthony II I. Villamor');
-      }
-
-      function isAnyModalActive() {
-          return $('.modal').hasClass('show');
-      }
-
-      function checkModals() {
-        if (!isAnyModalActive()) {
-          resetFooter();
-        }
-      }
-      setInterval(checkModals, 500);
-    </script>
-  </body>
+        <footer class="bgCustom">
+            <p class="signature" id="left-margin">Fiel Louis L. Omas-as |  Giles Anthony II I. Villamor</p>
+            <p class="signature" id="left-margin">BSCS - 2</p>
+        </footer>
+    </body>
 </html>

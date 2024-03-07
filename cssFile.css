@@ -20,6 +20,7 @@ main {
 .signature {
     color: #1DB954;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 #businessName {
@@ -157,10 +158,10 @@ h1, p, .registerInterface {
 }
 
 .registerInterface {
-    justify-content: center;
     font-size: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 50%;
 }
 
 .form-control {
@@ -173,8 +174,20 @@ h1, p, .registerInterface {
     padding: 10px;
 }
 
+#footerInt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #b3b3b3;
+}
+
 footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    padding-top: 10px;
+    padding-left: 25px;
+    text-align: left;
+    background-color: #212529;
 }
