@@ -1,0 +1,24 @@
+General Instructions:
+
+1.) CREATE a folder named 7_Lab Exercise inside the MIDTERM folder in the network drive.
+
+2.) Create a DB in phpMyAdmin with the following details:
+ DB Name: dbLastnameF1
+ Tables:
+   tblUserProfile (userid, firstname, lastname, gender, birthdate)
+   tblUserAccount(acctid, emailadd, username, password,usertype)
+**You will add more tables to this DB to implement CRUD operations or any transaction/s related to your project.
+
+3.) In HTDOCS, create a folder named F1_Lastname and save all necessary files to this directory. 
+   Implement User Registration and User Login using PHP.
+
+4.) Export the SQL file and save it inside 7_Lab Exercise folder. 
+    Copy F1_Lastname folder and save it inside 7_Lab Exercise folder.
+
+5.) Before the meeting ends, create a 1-min screen demo showing the following items:
+    - PHP Code
+    - DB Structure
+    - User Registration Page 
+    - Table showing the newly entered information
+    - Login using the previously registered account.
+
