@@ -1,13 +1,10 @@
-body {
-  background-color: black;
+nav {
+  background-color: #121212;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: x-large;
-}
 .nav-link {
-  color: white;
+  color: white !important;
+  font-weight: bold;
 }
 .nav-link:hover {
   color: #1ed760 !important;
@@ -15,11 +12,10 @@ body {
 
 .nav-item {
   color: white;
-  font-size: large;
+  font-size: larger;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: white;
-  font-weight: bold;
   font-size: larger;
 }
