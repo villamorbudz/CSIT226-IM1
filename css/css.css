@@ -19,6 +19,15 @@
     flex-wrap: nowrap;
 }
 
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .PageContent {
     margin: 0px 16px;
     padding: 30px 0px;
@@ -145,14 +154,6 @@
 
 .box-form {
     margin: 10px 10px;
-}
-
-#query {
-    height: 200px;
-    text-align: left;
-    padding-left: 0;
-    padding-top: 0;
-    align-content: baseline;
 }
 
 .test {

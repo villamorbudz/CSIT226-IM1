@@ -2,11 +2,13 @@
     include("includes/header.php");
     include("includes/imports.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <title>Contact Us | Eventify</title>
         <link rel="stylesheet" href="css/css.css">
     </head>
@@ -45,7 +47,7 @@
                     <div>
                         <div class="flex-wrapper-column">
                             <label class="label-form" for="query">Query: </label>
-                            <input class="box-form" type="text" name="query" id="query" placeholder="Tests">
+                            <textarea class="box-form" name="query" rows="3" placeholder="test"></textarea>
                         </div>
                     </div>
                     

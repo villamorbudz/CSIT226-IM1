@@ -25,16 +25,10 @@ include('imports.php');
                     <p class="nav-link"> | </p>
                 </li>
                 <li class="nav-item">
-                    <div class="dropdown">
-                        <a class="btn dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Profile
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="index.php">Log Out</a></li>
-                        </ul>
-                    </div>
+                    <a class="nav-link" href="register.php">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Log In</a>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,61 @@
+.bgCustom {
+    background-color: #121212;
+    padding: 20px 20px;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+
+.flex-wrapper-column {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    flex-wrap: nowrap;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.leftChild {
+    flex-grow: 2;
+    box-sizing: border-box;
+}
+
+.rightChild {
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.label-form {
+    color: black;
+    margin: 0px 10px;
+}
+
+.box-form {
+    margin: 10px 10px;
+}
+
+.form-bg {
+    background-color: white;
+}
+
+.space {
+    height: 50px;
+}
