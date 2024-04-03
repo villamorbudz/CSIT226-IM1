@@ -12,7 +12,6 @@ include('imports.php');
       <div class="row">
         <div class="col-md-6">
           <h5 class="footer-header left-align">Fiel Louis L. Omas-as</h5>
-          <h5 class="footer-header left-align">Giles Anthony I. Villamor II</h5>
           <h5 class="footer-header left-align">BSSC - 2</h5>
         </div>
         <div class="col-md-6">
