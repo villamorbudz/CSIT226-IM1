@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+.bottom-wrapper {
+    position: absolute;
+    bottom: 10px;
+}
+
 .flex-wrapper {
     display: flex;
     align-items: stretch;
@@ -22,6 +27,16 @@
     align-items: stretch;
     flex-flow: column;
     flex-wrap: nowrap;
+    margin: 0px 5px;
+}
+
+#registration {
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+#back-button {
+    margin: 0px 10px;
 }
 
 .center {
@@ -33,29 +48,90 @@
     transform: translate(-50%, -50%);
 }
 
+.div-center {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .leftChild {
+    align-content: center;
     flex-grow: 2;
     box-sizing: border-box;
 }
 
 .rightChild {
+    display: flex;
     flex-grow: 1;
     box-sizing: border-box;
+}
+
+form {
+    margin: 0;
 }
 
 .label-form {
     color: black;
     margin: 0px 10px;
+    vertical-align: baseline;
+}
+
+.label-form1 {
+    color: black;
+    margin: 0px 15px;
+    vertical-align: baseline;
 }
 
 .box-form {
     margin: 10px 10px;
 }
 
+.shadow-box {
+    border: 10px solid green;
+    border-radius: 15px;
+}
+
+.headerDiv {
+    background-color: green;
+    color: white;
+    border: 5px solid green;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 15px;
+}
+
+.succ-message {
+    color: green;
+    margin: 10px 15px;
+}
+
 .form-bg {
     background-color: white;
+    width: 20lh;
 }
 
 .space {
     height: 50px;
+}
+
+.space1 {
+    height: 100px;
+}
+
+.bottom-wrapper a {
+    text-decoration: none;
+    color: green;
+}
+
+input[type="radio"] {
+    vertical-align: baseline;
+}
+
+footer {
+    color: gray;
+    text-align: right;
+    position: absolute;
+    bottom: 10;
 }
