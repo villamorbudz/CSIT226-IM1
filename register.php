@@ -1,7 +1,8 @@
 <?php    
+		include 'includes/header-noLogged.php';
     include 'connect.php';
     include 'readrecords.php';   
-	include 'includes/imports.php';
+		include 'includes/imports.php';
 ?>
 
 <?php	
@@ -50,7 +51,7 @@
 
 	<body class="bgCustom">
 			<div class="center form-bg shadow-box">
-				<h2 class="div-center headerDiv">User Registration</h2>
+				<h2 class="div-center headerDiv">Sign up to Eventify</h2>
 				<form method="post">
 					<div class="flex-wrapper">
 						<div class="flex-wrapper-column">

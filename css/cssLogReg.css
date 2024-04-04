@@ -1,137 +1,137 @@
 .bgCustom {
-    background-color: #121212;
-    padding: 20px 20px;
+  background-color: #121212;
 }
 
 .center-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .bottom-wrapper {
-    position: absolute;
-    bottom: 10px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .flex-wrapper {
-    display: flex;
-    align-items: stretch;
-    flex-flow: row;
-    flex-wrap: nowrap;
+  display: flex;
+  align-items: stretch;
+  flex-flow: row;
+  flex-wrap: nowrap;
 }
 
 .flex-wrapper-column {
-    display: flex;
-    align-items: stretch;
-    flex-flow: column;
-    flex-wrap: nowrap;
-    margin: 0px 5px;
+  display: flex;
+  align-items: stretch;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  margin: 0px 5px;
 }
 
 #registration {
-    margin: 0px 20px;
-    padding: 0px 20px;
+  margin: 0px 20px;
+  padding: 0px 20px;
 }
 
 #back-button {
-    margin: 0px 10px;
+  margin: 0px 10px;
 }
 
 .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .div-center {
-    margin: auto;
-    text-align: center;
-    vertical-align: middle;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .leftChild {
-    align-content: center;
-    flex-grow: 2;
-    box-sizing: border-box;
+  align-content: center;
+  flex-grow: 2;
+  box-sizing: border-box;
 }
 
 .rightChild {
-    display: flex;
-    flex-grow: 1;
-    box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  box-sizing: border-box;
 }
 
 form {
-    margin: 0;
+  margin: 0;
 }
 
 .label-form {
-    color: black;
-    margin: 0px 10px;
-    vertical-align: baseline;
+  color: white;
+  margin: 0px 10px;
+  vertical-align: baseline;
 }
 
 .label-form1 {
-    color: black;
-    margin: 0px 15px;
-    vertical-align: baseline;
+  color: white;
+  margin: 0px 15px;
+  vertical-align: baseline;
 }
 
 .box-form {
-    margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 .shadow-box {
-    border: 10px solid green;
-    border-radius: 15px;
+  border: 10px solid black;
+  border-radius: 15px;
 }
 
 .headerDiv {
-    background-color: green;
-    color: white;
-    border: 5px solid green;
+  background-color: black;
+  color: white;
+  border: 5px solid black;
 }
 
 .error-message {
-    color: red;
-    margin: 10px 15px;
+  color: red;
+  margin: 10px 15px;
 }
 
 .succ-message {
-    color: green;
-    margin: 10px 15px;
+  color: black;
+  margin: 10px 15px;
 }
 
 .form-bg {
-    background-color: white;
-    width: 20lh;
+  background-color: black;
+  color: white;
+  width: 20lh;
 }
 
 .space {
-    height: 50px;
+  height: 50px;
 }
 
 .space1 {
-    height: 100px;
+  height: 100px;
 }
 
 .bottom-wrapper a {
-    text-decoration: none;
-    color: green;
+  text-decoration: none;
+  color: black;
 }
 
 input[type="radio"] {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 footer {
-    color: gray;
-    text-align: right;
-    position: absolute;
-    bottom: 10;
+  color: gray;
+  text-align: right;
+  position: absolute;
+  bottom: 10;
 }

@@ -1,6 +1,7 @@
 <?php    
     include 'connect.php'; 
 	include 'includes/imports.php';
+    include 'includes/header-noLogged.php';
 
 	if(isset($_POST['btnLogin'])){
 		$uname = $_POST['txtusername'];
