@@ -19,7 +19,7 @@ include('imports.php');
                     <a class="nav-link" href="createEvent.php">Create Event</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <p class="nav-link"> | </p>
