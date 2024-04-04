@@ -3,6 +3,7 @@
     include 'connect.php';
     include 'readrecords.php';   
 		include 'includes/imports.php';
+    include 'includes/footerV.php';
 ?>
 
 <!DOCTYPE html>
