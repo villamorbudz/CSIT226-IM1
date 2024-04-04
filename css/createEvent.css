@@ -1,0 +1,30 @@
+body {
+  background-color: #121212 !important;
+}
+
+.form-label {
+  color: white;
+}
+
+.form-check-label {
+  color: white;
+}
+
+#createEventForm {
+  margin-top: 60px;
+  margin-left: 500px;
+  margin-right: 500px;
+  align-content: center;
+}
+
+#createEventform-header {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+#createEventBtn {
+  width: 50%;
+  height: 150%;
+  font-weight: 500;
+}

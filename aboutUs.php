@@ -101,7 +101,7 @@
 
         <footer style="position: relative; min-height: 25vh">
         <?php
-            include("includes/footer.php");
+            include("includes/footerO.php");
         ?>
         </footer>
     </body>

@@ -47,7 +47,7 @@
                     <div>
                         <div class="flex-wrapper-column">
                             <label class="label-form" for="query">Query: </label>
-                            <textarea class="box-form" name="query" rows="3" placeholder="test"></textarea>
+                            <textarea class="box-form" name="query" rows="3" placeholder="Enter your query here"></textarea>
                         </div>
                     </div>
                     
@@ -57,7 +57,7 @@
 
         <footer style="position: relative; min-height: 25vh">
         <?php
-            include("includes/footer.php");
+            include("includes/footerO.php");
         ?>
         </footer>
     </body>

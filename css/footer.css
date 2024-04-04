@@ -10,6 +10,7 @@
 .footer-header {
   color: gray;
 }
+
 .footer-link {
   color: white;
   text-decoration: none;
@@ -17,4 +18,8 @@
 
 .footer-link:hover {
   color: #1ed760 !important;
+}
+
+.left-align {
+  text-align: left;
 }

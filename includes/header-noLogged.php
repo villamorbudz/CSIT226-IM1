@@ -16,15 +16,6 @@ include('imports.php');
         <div class="navbar mx-5" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Events</a>
-                </li>
-                <li class="nav-item">
-                    <p class="nav-link"> | </p>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="register.php">Register</a>
                 </li>
                 <li class="nav-item">

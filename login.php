@@ -1,8 +1,7 @@
 <?php    
     include 'connect.php'; 
 	include 'includes/imports.php';
-
-    $style = "";
+    include 'includes/header-noLogged.php';
 
 	if(isset($_POST['btnLogin'])){
 		$uname = $_POST['txtusername'];
@@ -40,14 +39,13 @@
     </head>
 
 	<body class="bgCustom">
-        <div class="center flex-wrapper">
+        <div class="center flex-wrapper shadow-box">
             <div class="leftChild">
                 <img src="images/party.jpg" alt="people partying">
             </div>
             <div class="rightChild">
                 <form class="form-bg" method="post">
-                    <div class="space"></div>
-                    <div class="space"></div>
+                    <div class="space"><h2 class="div-center">LOG IN</h2></div>
                     <div class="flex-wrapper-column">
                         <label class="label-form" for="username">Username:</label>
                         <input class="box-form" type="text" name="txtusername" id="username" placeholder="" autocomplete="off">
@@ -58,16 +56,22 @@
                         <input class="box-form" type="password" name="txtpassword" id="password" placeholder="" autocomplete="off">
                     </div>
                     <div class="space"></div>
-                    <div class="space"></div>
                     <div class="space">
                         <?php if (isset($errLogIn) && !empty($errLogIn)) { ?>
-                                <p class="errLogIn label-form"><?= $errLogIn ?></p>
+                                <p class="errLogIn error-message"><?= $errLogIn ?></p>
                         <?php } ?>
                     </div>
-                    <a href="index.php">&lt Back</a>
-                    <input class="box-form" type="submit" name="btnLogin" value="Login">
+                    <div class="bottom-wrapper">
+                        <a class="box-form" href="index.php">&lt Back</a>
+                        <input class="box-form" type="submit" name="btnLogin" value="Login">
+                    </div>
                 </form>
             </div>
         </div>
 	</body>
+    <footer>
+        <h6>Fiel Louis L. Omas-as</h6>
+        <h6>Giles Anthony I. Villamor</h6>
+        <h6>BSCS - 2</h6>
+    </footer>
 </html>
