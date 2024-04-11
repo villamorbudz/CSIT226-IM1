@@ -13,8 +13,8 @@ include('imports.php');
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar mx-5" id="navbarNav">
-            <ul class="navbar-nav">
+        <div id="navbarNav" class="navbar mx-5">
+            <ul id="loggedIn" class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="createEvent.php">Create Event</a>
                 </li>
@@ -37,6 +37,18 @@ include('imports.php');
                     </div>
                 </li>
             </ul>
+            <ul id="loggedIn" class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
+
+<body>
+    <script src="js/index.js"></script>
+</body>
