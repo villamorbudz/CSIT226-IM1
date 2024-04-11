@@ -1,7 +1,7 @@
 <?php
-include('includes/header-noLogged.php');
-include('includes/footer.php');
-include('includes/imports.php');
+  include('includes/header.php');
+  include('includes/footer.php');
+  include('includes/imports.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,7 @@ include('includes/imports.php');
 </head>
 
 <body>
+  <h1 class="center welcome-message">Welcome to Eventify</h1>
 </body>
 
 </html>
