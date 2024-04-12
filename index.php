@@ -1,5 +1,5 @@
 <?php
-include('includes/header-noLogged.php');
+include('includes/header-user.php');
 include('includes/footer.php');
 include('includes/imports.php');
 ?>

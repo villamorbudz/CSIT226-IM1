@@ -1,5 +1,5 @@
 <?php 
-    include("includes/header.php");
+    include("includes/header-guest.php");
     include("includes/imports.php");
 ?>
 

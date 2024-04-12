@@ -1,9 +1,7 @@
 <?php    
-		include 'includes/header.php';
-    include 'connect.php';
-    include 'readrecords.php';   
+		include 'includes/header-user.php';  
 		include 'includes/imports.php';
-    include 'includes/footerV.php';
+    include 'includes/footer-villamor.php';
 ?>
 
 <!DOCTYPE html>
