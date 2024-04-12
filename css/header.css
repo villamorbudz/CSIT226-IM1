@@ -1,4 +1,5 @@
 nav {
+  user-select: none;
   background-color: #000000;
 }
 
@@ -18,4 +19,8 @@ nav {
 .navbar-dark .navbar-nav .nav-link {
   color: white;
   font-size: larger;
+}
+
+#split:hover {
+  color: white !important;
 }

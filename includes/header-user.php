@@ -22,7 +22,7 @@ include('imports.php');
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <p class="nav-link"> | </p>
+                    <p class="nav-link" id="split"> | </p>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">

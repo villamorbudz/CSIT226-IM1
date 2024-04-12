@@ -1,0 +1,49 @@
+body {
+  background-color: #121212 !important;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+.form-check-label {
+  color: white;
+}
+
+.form-control {
+  background-color: #121212;
+  border-color: #6d6d6d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-control:focus {
+  background-color: #121212;
+  border-color: white;
+  color: white;
+}
+
+#register {
+  margin-top: 60px;
+  margin-left: 35%;
+  margin-right: 35%;
+  align-content: center;
+}
+
+#register-header {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#nextBtn {
+  background-color: #1ed760;
+  color: black;
+  width: 75%;
+  height: 120%;
+  font-weight: 500;
+  font-size: 24px;
+}

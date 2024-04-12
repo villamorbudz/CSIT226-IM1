@@ -3,7 +3,7 @@
   <style>
     @font-face {
       font-family: "Gotham";
-      src: url("fonts/Gotham/Gotham-Light.otf") format("truetype");
+      src: url("fonts/Gotham/Gotham-Black.otf") format("truetype");
     }
   </style>
 </head>

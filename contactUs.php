@@ -1,6 +1,7 @@
 <?php 
-    include("includes/header-guest.php");
     include("includes/imports.php");
+    include("includes/header-guest.php");
+    include('includes/footer-omasas.php');
 ?>
 
 <!DOCTYPE html>
@@ -54,11 +55,5 @@
                 </form>
             </section>
         </div>
-
-        <footer style="position: relative; min-height: 25vh">
-        <?php
-            include("includes/footerO.php");
-        ?>
-        </footer>
     </body>
 </html>
