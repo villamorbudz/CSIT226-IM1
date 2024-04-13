@@ -45,7 +45,7 @@
             </div>
             <div class="rightChild">
                 <form class="form-bg" method="post">
-                    <div class="space"><h2 class="div-center">LOG IN</h2></div>
+                    <div class="space"><h2 class="div-center headerDiv">LOG IN</h2></div>
                     <div class="flex-wrapper-column">
                         <label class="label-form" for="username">Username:</label>
                         <input class="box-form" type="text" name="txtusername" id="username" placeholder="" autocomplete="off">

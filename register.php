@@ -1,11 +1,9 @@
 <?php    
-		include 'includes/header-noLogged.php';
+	include 'includes/header-noLogged.php';
     include 'connect.php';
     include 'readrecords.php';   
-		include 'includes/imports.php';
-?>
-
-<?php	
+	include 'includes/imports.php';
+	
 	if(isset($_POST['btnRegister'])){		
 		//retrieve data from form and save the value to a variable
 		//for tbluserprofile
