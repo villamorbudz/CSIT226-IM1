@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2024 at 01:13 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Apr 18, 2024 at 04:19 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,7 +76,8 @@ INSERT INTO `tbluseraccount` (`acctid`, `emailadd`, `username`, `password`, `use
 (5, 'jeffrey@gmail.com', 'jeff123', '$2y$12$AopIXnoolsRxIdtfSMYq6OIt2zlV783Vo1TL8R3jhDNYcgCQSrpDm', 'USER'),
 (6, 'arabela@gmail.com', 'arabela123', '$2y$12$.6DtCets43ynXsz8.DMZNuXTvAbEBSz5zMBMcdAkFEVV5HA44amSe', 'USER'),
 (7, 'thea@gmail.com', 'thea123', '$2y$12$Uj7ZImUrAoM/Hy2ub.J8m.W/QYCJUbjibquW63PiqCbUCti2xYnrm', 'USER'),
-(8, 'charisse@gmail.com', 'char123', '$2y$12$NNb2GKo2b76jTZQUL2IJ0.LfyYYu.2KYZqmYjbfWQ98ZJIp5S9FPy', 'USER');
+(8, 'charisse@gmail.com', 'char123', '$2y$12$NNb2GKo2b76jTZQUL2IJ0.LfyYYu.2KYZqmYjbfWQ98ZJIp5S9FPy', 'USER'),
+(9, 'test@gmail.com', 'test', '$2y$12$pUm5ys5w5D9f0lyx0q4V4eN/RAQrg/q/wp5K/WHJ3px8zQRwDHgsu', 'USER');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,8 @@ INSERT INTO `tbluserprofile` (`userid`, `firstname`, `lastname`, `gender`, `birt
 (5, 'Jeffrey', 'Kho', 'MALE', '2003-12-13'),
 (6, 'Arabela', 'Uy', 'FEMALE', '2003-01-15'),
 (7, 'Thea', 'Omas-as', 'FEMALE', '2000-12-05'),
-(8, 'Charisse', 'Inso', 'FEMALE', '2000-01-01');
+(8, 'Charisse', 'Inso', 'FEMALE', '2000-01-01'),
+(9, 'test', 'test', 'MALE', '2000-10-10');
 
 --
 -- Indexes for dumped tables
@@ -143,13 +145,13 @@ ALTER TABLE `tblevent`
 -- AUTO_INCREMENT for table `tbluseraccount`
 --
 ALTER TABLE `tbluseraccount`
-  MODIFY `acctid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `acctid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbluserprofile`
 --
 ALTER TABLE `tbluserprofile`
-  MODIFY `userid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `userid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
