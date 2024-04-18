@@ -34,6 +34,7 @@
                             <th class="colHead">Time</th>
                             <th class="colHead">Event Host ID</th>
                             <th></th>
+                            <th></th>
                         </tr> 
                     </thead>  
                     <tbody class="label-form">
@@ -48,7 +49,8 @@
                             <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
                             <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
                             <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
-                            <td><a class="toUpdate" href="updateEvent.php">Update</a></td>
+                            <td><a class="toUpdate" href="updateEvent.php">Edit Event</a></td>
+                            <td><a class="toUpdate" href="deleteEvent.php">Delete Event</a></td>
                         </tr>
                         <?php endwhile;?>
                     </tbody>         

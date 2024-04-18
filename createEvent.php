@@ -67,4 +67,10 @@
       </form>
     </div>
   </body>
+
+  <footer style="position: relative; min-height: 25vh">
+    <?php
+        include("includes/footerO.php");
+    ?>
+  </footer>
 </html>
