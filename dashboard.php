@@ -1,6 +1,7 @@
 <?php    
     include 'connect.php';
-    require_once 'includes/header.php'; 
+    include 'includes/imports.php';
+    require_once 'includes/header.php';
 
     $query1 = 'SELECT * from  tblevent';
         $resultset1 = mysqli_query($connection, $query1);
@@ -15,76 +16,75 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Dashboard | Eventify</title>
+        <link rel="stylesheet" href="css/cssLogReg.css">
         <link rel="stylesheet" href="css/cssDashboard.css">
-        
     </head>
 
-    <body>
-        <div style='background-color:#ffff00'>
-            <center>
-                <p style="color:white"><h2>List of Available Events</h2></p>
-            </center>
+    <body class="bgCustom">
+        <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
+            <h2 class="tableTitle">List of Available Events</h2> 
+            <div>
+                <table id="tblEventsDashboard" cellspacing="0" width="100%"> 
+                    <thead class="label-form">
+                        <tr> 
+                            <th class="colHead">Event ID</th> 
+                            <th class="colHead">Event Title</th> 
+                            <th class="colHead">Event Description</th>
+                            <th class="colHead">Date</th>
+                            <th class="colHead">Time</th>
+                            <th class="colHead">Event Host ID</th>
+                            <th></th>
+                        </tr> 
+                    </thead>  
+                    <tbody class="label-form">
+                        <?php
+                            while($row = $resultset1->fetch_assoc()):
+                                $id = $row['Event_ID'];
+                        ?>
+                        <tr>
+                            <td class="elemCenter"><?php echo $id ?></td>
+                            <td><?php echo $row['Event_Title'] ?></td>
+                            <td><?php echo $row['Event_Description'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
+                            <td><a class="toUpdate" href="updateEvent.php">Update</a></td>
+                        </tr>
+                        <?php endwhile;?>
+                    </tbody>         
+                </table>
+            </div>
         </div>
 
-        <div>        
-            <table id="tblEventsDashboard" cellspacing="0" width="100%"> 
-                <thead>
-                    <tr> 
-                        <th>Event ID</th> 
-                        <th>Event Title</th> 
-                        <th>Event Description</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Event Host</th>
-                    </tr> 
-                </thead>  
-                <tbody>
-                    <?php
-                        while($row = $resultset1->fetch_assoc()):
-                            $id = $row['Event_ID'];
-                    ?>
-                    <tr>
-                        <td><?php echo $id ?></td>
-                        <td><?php echo $row['Event_Title'] ?></td>
-                        <td><?php echo $row['Event_Description'] ?></td>
-                        <td><?php echo $row['Event_Date'] ?></td>
-                        <td><?php echo $row['Event_Time'] ?></td>
-                        <td><?php echo $row['Host_ID'] ?></td>
-                    </tr>
-                    <?php endwhile;?>
-                </tbody>         
-            </table>
-        </div>
-
-        <div style='background-color:#ffff00'>
-            <center>
-                <p style="color:white"><h2>List of Users</h2></p>
-            </center>
-        </div>
-
-        <div>        
-            <table id="tblUsers" cellspacing="0" width="100%"> 
-                <thead>
-                    <tr> 
-                        <th>User ID</th> 
-                        <th>Username</th> 
-                        <th>Email Address</th>
-                    </tr> 
-                </thead>  
-                <tbody>
+        <div class="centerHorizontallyDiv2 form-bg shadow-box marginTop">
+            <h2 class="tableTitle">List of Users</h2> 
+            <div>
+                <table id="tblUsers" cellspacing="0" width="100%"> 
+                    <thead class="label-form">
+                        <tr> 
+                            <th class="colHead">User ID</th> 
+                            <th class="colHead">Username</th> 
+                            <th class="colHead">Email Address</th>
+                            <th class="colHead">Usertype<th>
+                        </tr> 
+                    </thead>  
+                    <tbody class="label-form">
                     <?php
                         while($row = $resultset2->fetch_assoc()):
                             $uid = $row['acctid'];
                     ?>
                     <tr>
-                        <td><?php echo $uid ?></td>
-                        <td><?php echo $row['username'] ?></td>
-                        <td><?php echo $row['emailadd'] ?></td>
+                        <td class="elemCenter"><?php echo $uid ?></td>
+                        <td class="elemCenter"><?php echo $row['username'] ?></td>
+                        <td class="elemCenter"><?php echo $row['emailadd'] ?></td>
+                        <td class="elemCenter"><?php echo $row['usertype'] ?></td>
                     </tr>
                     <?php endwhile;?>
-                </tbody>         
-            </table>
-        </div>
+                </tbody>           
+                </table>
+            </div>
+        </div>      
+    </div>
     </body>
 
     <footer style="position: relative; min-height: 25vh">

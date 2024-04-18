@@ -1,0 +1,47 @@
+.centerHorizontallyDiv1 {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.centerHorizontallyDiv2 {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.marginTop {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tableTitle {
+    color: rgb(0, 201, 0);
+}
+
+.colHead {
+    font-size: 20px;
+    color:#797979;
+    text-align: center;
+}
+
+.elemCenter {
+    text-align: center;
+}
+
+.toUpdate {
+    text-decoration: none;
+    background-color: transparent;
+    color: #00c900;
+    padding: 0px 5px;
+    border: 1px solid #00c900 ;
+    border-radius: 5px;
+}
+
+.toUpdate:hover {
+    color: white;
+    border: 1px solid white ;
+    border-radius: 5px;
+}
