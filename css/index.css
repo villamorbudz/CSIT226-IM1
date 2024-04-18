@@ -15,3 +15,7 @@ body {
   color: white;
   font-size: 60px;
 }
+
+.container {
+  height: 100%;
+}

@@ -1,7 +1,6 @@
 <?php    
 		include 'includes/header-user.php';  
 		include 'includes/imports.php';
-    include 'includes/footer-villamor.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +9,7 @@
     <link rel="stylesheet" href="css/createEvent.css">
   </head>
   <body>
+    <div class="container">
     <div id="createEventForm">
       <form class="row g-3">
         <h2 id="createEventForm-header">Create New Event</h2>
@@ -42,5 +42,9 @@
         </div>
       </form>
     </div>
+    </div>
   </body>
+  <?php
+    include 'includes/footer-villamor.php';
+  ?>
 </html>

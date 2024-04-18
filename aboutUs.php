@@ -1,6 +1,6 @@
 <?php 
     include('includes/imports.php');
-    include('includes/footer-omasas.php');
+    include('includes/header-guest.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,12 +8,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>About Us | Eventify</title>
-        <link rel="stylesheet" href="css/css.css">
+        <link rel="stylesheet" href="css/aboutUs.css">
         
     </head>
 
     <body>
-        <div class="center-wrapper">
+        <div class="container center-wrapper">
             <section class="PageContent">
                 <h1 class="header-aboutUs padding3em">About Us</h1>
                 <div class="flex-wrapper">
@@ -99,4 +99,7 @@
             </section>
         </div>
     </body>
+    <?php
+        include('includes/footer-omasas.php');
+    ?>
 </html>

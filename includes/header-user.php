@@ -32,7 +32,7 @@ include('imports.php');
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Account</a></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="index.php">Log Out</a></li>
+                            <li><a class="dropdown-item" href="login.php">Log Out</a></li>
                         </ul>
                     </div>
                 </li>

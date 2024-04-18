@@ -2,6 +2,9 @@ body {
   background-color: #121212 !important;
 }
 
+.container {
+  height: 100%;
+}
 .form-label {
   color: white;
 }
@@ -12,8 +15,8 @@ body {
 
 #createEventForm {
   margin-top: 60px;
-  margin-left: 500px;
-  margin-right: 500px;
+  margin-left: 300px;
+  margin-right: 300px;
   align-content: center;
 }
 

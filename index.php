@@ -1,6 +1,5 @@
 <?php
-include('includes/header-guest.php');
-include('includes/footer.php');
+include('includes/header-user.php');
 include('includes/imports.php');
 ?>
 <!DOCTYPE html>
@@ -14,6 +13,9 @@ include('includes/imports.php');
 </head>
 
 <body>
+  <div class="container"></div>
 </body>
-
+<?php
+    include('includes/footer.php');
+?>
 </html>
