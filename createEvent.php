@@ -1,5 +1,10 @@
 <?php    
-		include 'includes/header.php';
+    include 'getUser.php';
+    if($current_user['usertype']=='ADMIN') {
+      include('includes/headerAdmin.php');
+    }else{
+      include('includes/header.php');
+    }
 		include 'includes/imports.php';
     include 'connect.php';
 
@@ -21,7 +26,7 @@
           $id = $row['acctid'];
         }
 
-      $sql ="Insert into tblevent(Event_Title,Event_Description,Event_Date,Event_Time,Event_Venue,Event_Type,Host_ID) values('".$eventTitle."','".$eventDescription."','".$eventDate."','".$eventTime."','".$eventVenue."','".$eventType."','".$id."')";
+      $sql ="Insert into tblevent(Event_Title,Event_Description,Event_Date,Event_Time,Event_Venue,Event_Type,Host_ID) values('".$eventTitle."','".$eventDescription."','".$eventDate."','".$eventTime."','".$eventVenue."','".$eventType."','".$current_user['userid']."')";
       mysqli_query($connection,$sql);
         
     }

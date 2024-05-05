@@ -1,5 +1,10 @@
 <?php
-  include('includes/header.php');
+  include('getUser.php');
+  if($current_user['usertype']=='ADMIN') {
+      include('includes/headerAdmin.php');
+  }else{
+      include('includes/header.php');
+  }
   include('includes/footer.php');
   include('includes/imports.php');
 ?>

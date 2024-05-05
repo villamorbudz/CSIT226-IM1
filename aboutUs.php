@@ -1,5 +1,10 @@
 <?php 
-    include("includes/header.php");
+    include("getUser.php");
+    if($current_user['usertype']=='ADMIN') {
+        include('includes/headerAdmin.php');
+    }else{
+        include('includes/header.php');
+    }
     include("includes/imports.php");
 ?>
 <!DOCTYPE html>
@@ -43,7 +48,7 @@
                         <h2 class="h2-sub">Owners</h2>
                         <div class="flex-wrapper-column">
                             <div class="flex-wrapper">
-                                <img class="Rmargin" src="/images/cat1.png" alt="placeholder">
+                                <img class="Rmargin" src="images/cat1.png" alt="placeholder">
                                 <div class="owner-name">
                                     <p class="branch">Giles Anthony I. Villamor II</p>
                                     <p class="p-content">
@@ -71,7 +76,7 @@
                                         Viverra maecenas accumsan lacus vel facilisis volutpat est velit.
                                     </p>
                                 </div>  
-                                <img class="Lmargin" src="/images/cat2.jpg" alt="placeholder">
+                                <img class="Lmargin" src="images/cat2.jpg" alt="placeholder">
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 <?php    
+    include 'getUser.php';
     include 'connect.php'; 
 	include 'includes/imports.php';
     include 'includes/header-noLogged.php';
@@ -19,8 +20,16 @@
 		}else if(!password_verify($pwd, $row[3])) {
 			$errLogIn = "Incorrect password.";
 		}else{
-            $_SESSION['username']=$row[0];
+            $user = array();
+            $user['userid'] = $row[0];
+            $user['username'] = $row[2];
+            $user['usertype'] = $row[4];
+
+            $_SESSION['user']=json_encode($user, true);    
+            $current_user = $user;
+
             header("location: index-logged.php");
+                
 		}
 			
 		
@@ -71,7 +80,6 @@
 	</body>
     <footer>
         <h6>Fiel Louis L. Omas-as</h6>
-        <h6>Giles Anthony I. Villamor</h6>
         <h6>BSCS - 2</h6>
     </footer>
 </html>
