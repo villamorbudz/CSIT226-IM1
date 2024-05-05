@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2024 at 04:19 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: May 05, 2024 at 06:57 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,7 +48,8 @@ INSERT INTO `tblevent` (`Event_ID`, `Event_Title`, `Event_Description`, `Event_D
 (3, 'Jane BDAY', 'Celebrate My Birthday with Me', '2024-10-08', '17:00:00', 'My House', 'Birthday', 4),
 (4, 'More testing', 'Testing after editing some small parts of code', '2024-04-13', '17:38:00', 'INDA HOUSE ! ! !', 'Homework', 1),
 (5, 'Housewarming Event', 'Help me feel welcome inda neigbourhood', '2024-04-06', '10:00:00', 'My house', 'Chilling Tah', 3),
-(6, 'Welcome US', 'Beginners Welcome Party', '2024-04-13', '18:44:00', 'My House', 'Welcome Party', 8);
+(6, 'Welcome US', 'Beginners Welcome Party', '2024-04-13', '18:44:00', 'My House', 'Welcome Party', 8),
+(8, 'Testing_host00', 'Testing whether currentuser_id reflects on tblevent', '2024-05-05', '13:30:00', 'Home', 'Chill', 5);
 
 -- --------------------------------------------------------
 
@@ -77,7 +78,7 @@ INSERT INTO `tbluseraccount` (`acctid`, `emailadd`, `username`, `password`, `use
 (6, 'arabela@gmail.com', 'arabela123', '$2y$12$.6DtCets43ynXsz8.DMZNuXTvAbEBSz5zMBMcdAkFEVV5HA44amSe', 'USER'),
 (7, 'thea@gmail.com', 'thea123', '$2y$12$Uj7ZImUrAoM/Hy2ub.J8m.W/QYCJUbjibquW63PiqCbUCti2xYnrm', 'USER'),
 (8, 'charisse@gmail.com', 'char123', '$2y$12$NNb2GKo2b76jTZQUL2IJ0.LfyYYu.2KYZqmYjbfWQ98ZJIp5S9FPy', 'USER'),
-(9, 'test@gmail.com', 'test', '$2y$12$pUm5ys5w5D9f0lyx0q4V4eN/RAQrg/q/wp5K/WHJ3px8zQRwDHgsu', 'USER');
+(9, 'miggy@gmail.com', 'miggy123', '$2y$12$PZmGmgylqZScAo46bt.ch.5e6jJ0FfXRWEyo3z/aqZGIt6WGgQh6G', 'USER');
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,7 @@ INSERT INTO `tbluserprofile` (`userid`, `firstname`, `lastname`, `gender`, `birt
 (6, 'Arabela', 'Uy', 'FEMALE', '2003-01-15'),
 (7, 'Thea', 'Omas-as', 'FEMALE', '2000-12-05'),
 (8, 'Charisse', 'Inso', 'FEMALE', '2000-01-01'),
-(9, 'test', 'test', 'MALE', '2000-10-10');
+(9, 'Miggy', 'Labasteda', 'MALE', '2014-01-08');
 
 --
 -- Indexes for dumped tables
@@ -139,7 +140,7 @@ ALTER TABLE `tbluserprofile`
 -- AUTO_INCREMENT for table `tblevent`
 --
 ALTER TABLE `tblevent`
-  MODIFY `Event_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Event_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbluseraccount`

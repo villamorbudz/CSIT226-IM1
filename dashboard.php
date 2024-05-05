@@ -29,44 +29,6 @@
     </head>
 
     <body class="bgCustom">
-        <!-- display all available events -->
-        <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
-            <h2 class="tableTitle">List of Available Events</h2> 
-            <div>
-                <table id="tblEventsDashboard" cellspacing="0" width="100%"> 
-                    <thead class="label-form">
-                        <tr> 
-                            <th class="colHead">Event ID</th> 
-                            <th class="colHead">Event Title</th> 
-                            <th class="colHead">Event Description</th>
-                            <th class="colHead">Date</th>
-                            <th class="colHead">Time</th>
-                            <th class="colHead">Event Host ID</th>
-                            <th></th>
-                        </tr> 
-                    </thead>  
-                    <tbody class="label-form">
-                        <?php
-                            while($row = $resultset1->fetch_assoc()):
-                                $id = $row['Event_ID'];
-                        ?>
-                        <tr>
-                            <td class="elemCenter"><?php echo $id ?></td>
-                            <td><?php echo $row['Event_Title'] ?></td>
-                            <td><?php echo $row['Event_Description'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
-                            <!-- displays "Join Event" button when event's Host_ID is different than the currentuser id -->
-                            <?php if($current_user['userid'] != $row['Host_ID']) { ?>
-                                <td><a class="toUpdate" href="#">Join Event</a></td>
-                            <?php } ?>
-                        </tr>
-                        <?php endwhile;?>
-                    </tbody>         
-                </table>
-            </div>
-        </div>
 
         <!-- display events created by user -->
         <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
@@ -95,8 +57,45 @@
                             <td><?php echo $row['Event_Description'] ?></td>
                             <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
                             <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
-                            <td><a class="toUpdate" href="updateEvent.php">Edit Event</a></td>
-                            <td><a class="toUpdate" href="deleteEvent.php">Delete Event</a></td>
+                            <td><a class="toUpdate" href="updateEvent.php?event_id=<?php echo $id; ?>">Edit Event</a></td>
+                            <td><a class="toUpdate" href="deleteEvent.php?event_id=<?php echo $id ?>">Delete Event</a></td>
+                        </tr>
+                        <?php endwhile;?>
+                    </tbody>         
+                </table>
+            </div>
+        </div>
+
+        <!-- display all available events -->
+        <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
+            <h2 class="tableTitle">List of Available Events</h2> 
+            <div>
+                <table id="tblEventsDashboard" cellspacing="0" width="100%"> 
+                    <thead class="label-form">
+                        <tr> 
+                            <th class="colHead">Event Title</th> 
+                            <th class="colHead">Event Description</th>
+                            <th class="colHead">Date</th>
+                            <th class="colHead">Time</th>
+                            <th class="colHead">Event Host ID</th>
+                            <th></th>
+                        </tr> 
+                    </thead>  
+                    <tbody class="label-form">
+                        <?php
+                            while($row = $resultset1->fetch_assoc()):
+                                $id = $row['Event_ID'];
+                        ?>
+                        <tr>
+                            <td><?php echo $row['Event_Title'] ?></td>
+                            <td><?php echo $row['Event_Description'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
+                            <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
+                            <!-- displays "Join Event" button when event's Host_ID is different than the currentuser id -->
+                            <?php if($current_user['userid'] != $row['Host_ID']) { ?>
+                                <td><a class="toUpdate" href="#">Join Event</a></td>
+                            <?php } ?>
                         </tr>
                         <?php endwhile;?>
                     </tbody>         
@@ -132,8 +131,8 @@
                 </tbody>           
                 </table>
             </div>
-        </div>      
-    </div>
+        </div>     
+
     </body>
 
     <footer style="position: relative; min-height: 25vh">

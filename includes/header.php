@@ -8,13 +8,13 @@ include('imports.php');
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <?php if($current_user) { ?>
-        <a class="navbar-brand mx-3 my-1" href="index-logged.php">
-            <img src="images/eventify-logo-banner.png" alt="" width="175" class="d-inline-block align-text-center" />
-        </a>
+            <a class="navbar-brand mx-3 my-1" href="index-logged.php">
+                <img src="images/eventify-logo-banner.png" alt="" width="175" class="d-inline-block align-text-center" />
+            </a>
         <?php } else { ?>
-        <a class="navbar-brand mx-3 my-1" href="index.php">
-            <img src="images/eventify-logo-banner.png" alt="" width="175" class="d-inline-block align-text-center" />
-        </a>
+            <a class="navbar-brand mx-3 my-1" href="index.php">
+                <img src="images/eventify-logo-banner.png" alt="" width="175" class="d-inline-block align-text-center" />
+            </a>
         <?php } ?>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
