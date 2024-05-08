@@ -6,6 +6,7 @@
       include('includes/header.php');
     }
 		include 'includes/imports.php';
+<<<<<<< HEAD
     include 'connect.php';
 
 
@@ -30,6 +31,9 @@
       mysqli_query($connection,$sql);
         
     }
+=======
+    include 'includes/footerV.php';
+>>>>>>> 539b287df6f9cdbbc390a066884f2c5448cff985
 ?>
 
 <!DOCTYPE html>
