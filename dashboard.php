@@ -55,8 +55,8 @@
                             <td class="elemCenter"><?php echo $id ?></td>
                             <td><?php echo $row['Event_Title'] ?></td>
                             <td><?php echo $row['Event_Description'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
+                            <td class="elemCenter"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
+                            <td class="elemCenter"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
                             <td><a class="toUpdate" href="updateEvent.php?event_id=<?php echo $id; ?>">Edit Event</a></td>
                             <td><a class="toUpdate" href="deleteEvent.php?event_id=<?php echo $id ?>">Delete Event</a></td>
                         </tr>
@@ -89,8 +89,8 @@
                         <tr>
                             <td><?php echo $row['Event_Title'] ?></td>
                             <td><?php echo $row['Event_Description'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Date'] ?></td>
-                            <td class="elemCenter"><?php echo $row['Event_Time'] ?></td>
+                            <td class="elemCenter"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
+                            <td class="elemCenter"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
                             <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
                             <!-- displays "Join Event" button when event's Host_ID is different than the currentuser id -->
                             <?php if($current_user['userid'] != $row['Host_ID']) { ?>
@@ -142,3 +142,14 @@
     </footer>
     
 </html>
+
+<?php
+    function ordinalSuffix($number) {
+        $suffix = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
+        if (($number % 100) >= 11 && ($number % 100) <= 13) {
+            return $number.'th';
+        } else {
+            return $number.$suffix[$number % 10];
+        }
+    }
+?>

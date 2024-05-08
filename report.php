@@ -7,13 +7,13 @@
     $query1 = "SELECT userid, firstname, lastname, gender from  tbluserprofile where firstname like '%i%' and lastname like '%a%' and gender='MALE'";
         $resultset1 = mysqli_query($connection, $query1);
 
-    // $query2 = "SELECT acctid, username, COUNT(Host_ID) from tbluseraccount, tblevent where Host_ID=acctid group by acctid";
+    // $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount, tblevent where Host_ID=acctid group by acctid";
     //     $resultset2 = mysqli_query($connection, $query2);
 
-    $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount left join tblevent on acctid = Host_ID group by acctid";
+    $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount left join tblevent on acctid=Host_ID group by acctid";
         $resultset2 = mysqli_query($connection, $query2);
 
-    $query3 = "SELECT Event_Date, COUNT(*) as num_events from tblevent group by Event_Date order by num_events desc limit 3";
+    $query3 = "SELECT Event_Date, COUNT(Event_Date) as num_events from tblevent group by Event_Date order by num_events desc limit 3";
         $resultset3 = mysqli_query($connection, $query3);
 ?>
 
@@ -134,9 +134,9 @@
     function ordinalSuffix($number) {
         $suffix = ['th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th'];
         if (($number % 100) >= 11 && ($number % 100) <= 13) {
-            return $number . 'th';
+            return $number.'th';
         } else {
-            return $number . $suffix[$number % 10];
+            return $number.$suffix[$number % 10];
         }
     }
 ?>

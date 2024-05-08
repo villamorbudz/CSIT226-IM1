@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2024 at 06:57 PM
+-- Generation Time: May 08, 2024 at 06:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,13 +43,15 @@ CREATE TABLE `tblevent` (
 --
 
 INSERT INTO `tblevent` (`Event_ID`, `Event_Title`, `Event_Description`, `Event_Date`, `Event_Time`, `Event_Venue`, `Event_Type`, `Host_ID`) VALUES
-(1, 'Test', 'Testing ras code', '2024-04-13', '16:52:00', 'Akong Balay', 'Chill lang', 1),
-(2, 'test2', 'test no. 2', '2024-04-13', '17:00:00', 'Akong Balay', 'Relax', 2),
+(1, 'Test ! ! !', 'Testing ras code (edited)', '2024-04-13', '17:00:00', 'Akong Balay', 'Chill lang', 1),
 (3, 'Jane BDAY', 'Celebrate My Birthday with Me', '2024-10-08', '17:00:00', 'My House', 'Birthday', 4),
-(4, 'More testing', 'Testing after editing some small parts of code', '2024-04-13', '17:38:00', 'INDA HOUSE ! ! !', 'Homework', 1),
+(4, 'More testing', 'Testing after editing some small parts of code', '2024-04-13', '18:00:00', 'INDA HOUSE ! ! !', 'Homework', 1),
 (5, 'Housewarming Event', 'Help me feel welcome inda neigbourhood', '2024-04-06', '10:00:00', 'My house', 'Chilling Tah', 3),
 (6, 'Welcome US', 'Beginners Welcome Party', '2024-04-13', '18:44:00', 'My House', 'Welcome Party', 8),
-(8, 'Testing_host00', 'Testing whether currentuser_id reflects on tblevent', '2024-05-05', '13:30:00', 'Home', 'Chill', 5);
+(8, 'Testing_host00', 'Testing whether currentuser_id reflects on tblevent', '2024-05-05', '13:30:00', 'Home', 'Chill', 5),
+(11, 'Testing_edit00', 'testing edit portion for events (this is now edited)', '2024-05-20', '04:00:00', 'Home', 'Homework', 2),
+(12, 'Tesitng_count00', 'testing count report 00', '2024-04-06', '02:00:00', 'Home', 'Homework', 2),
+(13, 'Testing_count01', 'Testing count report 01', '2024-04-13', '11:00:00', 'Homework', 'Home', 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,9 @@ INSERT INTO `tbluseraccount` (`acctid`, `emailadd`, `username`, `password`, `use
 (6, 'arabela@gmail.com', 'arabela123', '$2y$12$.6DtCets43ynXsz8.DMZNuXTvAbEBSz5zMBMcdAkFEVV5HA44amSe', 'USER'),
 (7, 'thea@gmail.com', 'thea123', '$2y$12$Uj7ZImUrAoM/Hy2ub.J8m.W/QYCJUbjibquW63PiqCbUCti2xYnrm', 'USER'),
 (8, 'charisse@gmail.com', 'char123', '$2y$12$NNb2GKo2b76jTZQUL2IJ0.LfyYYu.2KYZqmYjbfWQ98ZJIp5S9FPy', 'USER'),
-(9, 'miggy@gmail.com', 'miggy123', '$2y$12$PZmGmgylqZScAo46bt.ch.5e6jJ0FfXRWEyo3z/aqZGIt6WGgQh6G', 'USER');
+(9, 'miggy@gmail.com', 'miggy123', '$2y$12$PZmGmgylqZScAo46bt.ch.5e6jJ0FfXRWEyo3z/aqZGIt6WGgQh6G', 'USER'),
+(10, 'jimmy@gmail.com', 'jimmy123', '$2y$12$tjbodT6tvkUMzL3SaqmlXuvzTs2LNzvtgWnEK7C93R3LeXWMxF7ti', 'USER'),
+(11, 'wakwak@gmail.com', 'wakwak123', '$2y$12$FbUldhp00WAcBljnUIY9weWy1VkfBru4hl2qKimntx/ZbwWNNd8Uq', 'USER');
 
 -- --------------------------------------------------------
 
@@ -107,7 +111,9 @@ INSERT INTO `tbluserprofile` (`userid`, `firstname`, `lastname`, `gender`, `birt
 (6, 'Arabela', 'Uy', 'FEMALE', '2003-01-15'),
 (7, 'Thea', 'Omas-as', 'FEMALE', '2000-12-05'),
 (8, 'Charisse', 'Inso', 'FEMALE', '2000-01-01'),
-(9, 'Miggy', 'Labasteda', 'MALE', '2014-01-08');
+(9, 'Miggy', 'Labasteda', 'MALE', '2014-01-08'),
+(10, 'Jimmy', 'Malvoro', 'MALE', '2002-06-11'),
+(11, 'Wakwak', 'Ako', 'OTHER', '2015-01-06');
 
 --
 -- Indexes for dumped tables
@@ -140,19 +146,19 @@ ALTER TABLE `tbluserprofile`
 -- AUTO_INCREMENT for table `tblevent`
 --
 ALTER TABLE `tblevent`
-  MODIFY `Event_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Event_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbluseraccount`
 --
 ALTER TABLE `tbluseraccount`
-  MODIFY `acctid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `acctid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbluserprofile`
 --
 ALTER TABLE `tbluserprofile`
-  MODIFY `userid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `userid` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables

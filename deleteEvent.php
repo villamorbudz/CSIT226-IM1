@@ -1,7 +1,6 @@
 <?php
 include 'connect.php';
 
-// Check if the Event ID is provided in the URL parameters
 if(isset($_GET['event_id'])) {
     $event_id = mysqli_real_escape_string($connection, $_GET['event_id']);
 
