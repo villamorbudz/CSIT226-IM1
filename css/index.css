@@ -19,6 +19,13 @@ body {
   padding: 50px 0px;
 }
 
+.welcome-message-no-space {
+  color: white;
+  font-size: 60px;
+  align-items: center;
+  text-align: center;
+}
+
 table, h2, .total {
   color: white;
 }
@@ -71,6 +78,16 @@ h2 {
 
 .tableTitle {
   text-align: center;
+}
+
+.gender-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-stats,
+.gender-pie-chart {
+  flex-basis: 48%; /* Adjust as needed */
 }
 
 footer {

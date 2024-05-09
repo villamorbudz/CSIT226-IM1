@@ -6,6 +6,14 @@
   $query1 = "SELECT gender, COUNT(gender) as count from tbluserprofile group by gender";
   $resultset1 = mysqli_query($connection, $query1);
 
+  // Store gender statistics data in arrays
+  $genderLabels = [];
+  $genderData = [];
+  while ($row = mysqli_fetch_assoc($resultset1)) {
+    $genderLabels[] = $row['gender'];
+    $genderData[] = $row['count'];
+  }
+
   $queryTotalUsers = "SELECT COUNT(*) AS total_users FROM tbluserprofile";
   $resultTotalUsers = mysqli_query($connection, $queryTotalUsers);
   $rowTotalUsers = mysqli_fetch_assoc($resultTotalUsers);
@@ -23,13 +31,22 @@
       $birthMonthData[$row['birth_month']] = $row['total_users'];
   }
 
-  // Store gender statistics data in arrays
-  $genderLabels = [];
-  $genderData = [];
-  while ($row = mysqli_fetch_assoc($resultset1)) {
-    $genderLabels[] = $row['gender'];
-    $genderData[] = $row['count'];
-  }
+  // Query to get the total number of events and calculate the average number of users per event
+  $queryAverageUsersPerEvent = "SELECT AVG(total_users) AS average_users_per_event FROM (SELECT COUNT(*) AS total_users FROM tblevent GROUP BY Event_ID) AS user_counts";
+  $resultAverageUsersPerEvent = mysqli_query($connection, $queryAverageUsersPerEvent);
+  $rowAverageUsersPerEvent = mysqli_fetch_assoc($resultAverageUsersPerEvent);
+
+  $userTotalQuery = "SELECT COUNT(*) as user_count FROM tbluseraccount";
+  $userTotalResult = mysqli_query($connection, $userTotalQuery);
+  $userTotalRow = mysqli_fetch_assoc($userTotalResult);
+  $userTotal = $userTotalRow['user_count'];
+
+  $eventTotalQuery = "SELECT COUNT(*) as event_count FROM tblevent";
+  $eventTotalResult = mysqli_query($connection, $eventTotalQuery);
+  $eventTotalRow = mysqli_fetch_assoc($eventTotalResult);
+  $eventTotal = $eventTotalRow['event_count'];
+
+  $averageUsersPerEvent = $userTotal / $eventTotal;
 ?>
 
 <!DOCTYPE html>
@@ -57,11 +74,28 @@
   <div class="center-wrapper">
     <section class="PageContent">
 
-      <!-- Total Users -->
+      <!-- Greetings -->
       <div class="total-users">
-        <h1 class="welcome-message">Eventify has a total of <?php echo $totalUsers ?> users worldwide!</h1>
+        <?php
+          if($current_user['usertype']=='ADMIN') { ?>
+            <h2>Welcome Back <?php echo $current_user['username'] ?>!</h2>
+          <?php }else { ?>
+            <h2>Welcome to Eventify, <?php echo $current_user['username'] ?>!</h2>
+          <?php } ?>
       </div>
 
+      <!-- Total Users -->
+      <div class="total-users">
+        <h1 class="welcome-message">Eventify has a total of <?php echo $totalUsers ?>m users nationwide!</h1>
+      </div>
+
+      <!-- Display the average number of users per event -->
+      <div class="average-users-per-event">
+        <p class="welcome-message-no-space" >with</p>
+        <h2 class="welcome-message"><?php echo $averageUsersPerEvent ?> users per event on average.</h2>
+      </div>
+
+      <div class="gender-sections">
       <!-- Gender Statistics Table -->
       <div class="gender-stats">
         <h2>Gender Statistics</h2>
@@ -86,7 +120,7 @@
             ?>
             <tr>
               <td class="elemCenter"><?php echo $category ?></td>
-              <td class="elemCenter"><?php echo $genderData[$index] ?></td>
+              <td class="elemCenter"><?php echo $genderData[$index] ?>m</td>
             </tr>
             <?php } ?>
           </tbody> 
@@ -95,14 +129,16 @@
 
       <!-- Pie Chart for Gender Statistics -->
       <div class="gender-pie-chart">
-        <h2>Gender Pie Chart</h2>
+        <h2>Gender Pie Chart (in millions)</h2>
         <center><canvas id="genderPieChart" width="300" height="300"></canvas></center>
+      </div>
+
       </div>
 
 
       <!-- Birth Month Statistics -->
       <div class="birth-month-stats">
-        <h2>Birth Month Statistics</h2>
+        <h2>Birth Month Statistics (in milions)</h2>
         <table id="tblBirthMonthStat" cellspacing="5" width="100%"> 
           <thead class="label-form">
             <tr> 
@@ -125,6 +161,7 @@
           </tbody> 
         </table>
       </div>
+
 
     </section>
   </div>

@@ -8,9 +8,8 @@
         $resultset1 = mysqli_query($connection, $query1);
 
     // $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount, tblevent where Host_ID=acctid group by acctid";
-    //     $resultset2 = mysqli_query($connection, $query2);
 
-    $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount left join tblevent on acctid=Host_ID group by acctid";
+    $query2 = "SELECT acctid, username, COUNT(Host_ID) as event_count from tbluseraccount left join tblevent on acctid=Host_ID group by acctid"; 
         $resultset2 = mysqli_query($connection, $query2);
 
     $query3 = "SELECT Event_Date, COUNT(Event_Date) as num_events from tblevent group by Event_Date order by num_events desc limit 3";
