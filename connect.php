@@ -1,8 +1,6 @@
-<?php 
-	$connection = new mysqli('localhost', 'root','','dbvillamorf1');
-	
-	if (!$connection){
-		die (mysqli_error($mysqli));
-	}
-		
-?>
+<?php
+$connection = new mysqli('localhost', 'root', '', 'dbomasasf1');
+
+if (!$connection) {
+	die(mysqli_error($mysqli));
+}
