@@ -21,7 +21,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dashboard | Eventify</title>
+        <title>Report | Eventify</title>
         <link rel="stylesheet" href="css/cssLogReg.css">
         <link rel="stylesheet" href="css/cssDashboard.css">
     </head>

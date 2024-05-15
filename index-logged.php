@@ -58,7 +58,7 @@
   <link href="css/index.css" rel="stylesheet" />
   <link href="css/cssDashboard.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <title>Eventify | Home</title>
+  <title>Home | Eventify</title>
 </head>
 
 <body>
