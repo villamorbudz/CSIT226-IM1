@@ -7,6 +7,7 @@
 	if(isset($_POST['btnLogin'])){
 		$uname = $_POST['txtusername'];
 		$pwd = $_POST['txtpassword'];
+
 		//check tbluseraccount if username is existing
 		$sql = "Select * from tbluseraccount where username='".$uname."'";
 
@@ -17,7 +18,9 @@
 		
 		if($count == 0){
 			$errLogIn = "Username not found.";
-		}else if(!password_verify($pwd, $row[3])) {
+		}else if($row[5] != 1) {
+            $errLogIn = "Account trying to access is deactivated. Please compile a request to the admin to reactivate your account.";
+        }else if(!password_verify($pwd, $row[3])) {
 			$errLogIn = "Incorrect password.";
 		}else{
             $user = array();
