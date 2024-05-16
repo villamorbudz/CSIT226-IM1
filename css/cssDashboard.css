@@ -23,25 +23,42 @@
 
 .colHead {
     font-size: 20px;
-    color:#797979;
+    color: white;
     text-align: center;
+    vertical-align: middle;
+}
+
+.td {
+    margin: 0px 5px;
 }
 
 .elemCenter {
     text-align: center;
 }
 
-.toUpdate {
-    text-decoration: none;
-    background-color: transparent;
-    color: #00c900;
-    padding: 0px 5px;
-    border: 1px solid #00c900 ;
-    border-radius: 5px;
+.dashboard-main > div > div > table > tbody > tr > td > a.btn {
+    color: white !important;
+    background-color: rgb(0, 201, 0) !important;
 }
 
-.toUpdate:hover {
-    color: white;
-    border: 1px solid white ;
-    border-radius: 5px;
+.dashboard-main > div > div > table > tbody > tr > td > .btn:hover {
+    color: rgb(0, 201, 0) !important;
+    background-color: white !important;
 }
+
+th.colA {
+    background-color: #222222;
+}
+
+td.colA {
+    background-color: #333333; 
+}
+
+th.colB {
+    background-color: #555555;
+}
+
+td.colB {
+    background-color: #666666; 
+}
+

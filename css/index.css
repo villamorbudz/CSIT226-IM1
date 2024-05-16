@@ -80,13 +80,19 @@ h2 {
   text-align: center;
 }
 
-.gender-sections {
+.gender-sections,
+.bday-month-sections,
+.dashboard-main {
   display: flex;
   justify-content: space-between;
 }
 
 .gender-stats,
-.gender-pie-chart {
+.gender-pie-chart,
+.bday-month-stats,
+.bday-month-pie-chart,
+.left-child,
+.right-child {
   flex-basis: 48%; /* Adjust as needed */
 }
 

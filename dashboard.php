@@ -24,26 +24,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Dashboard | Eventify</title>
-        <link rel="stylesheet" href="css/cssLogReg.css">
         <link rel="stylesheet" href="css/cssDashboard.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/cssLogReg.css">
     </head>
 
     <body class="bgCustom">
-
+        <div class="dashboard-main">
         <!-- display events created by user -->
-        <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
+        <div class="left-child centerHorizontallyDiv1 form-bg shadow-box marginTop">
             <h2 class="tableTitle">List of Events you Created</h2> 
             <div>
                 <table id="tblEventsManaged" cellspacing="0" width="100%"> 
                     <thead class="label-form">
                         <tr> 
-                            <th class="colHead">Event ID</th> 
-                            <th class="colHead">Event Title</th> 
-                            <th class="colHead">Event Description</th>
-                            <th class="colHead">Date</th>
-                            <th class="colHead">Time</th>
-                            <th></th>
-                            <th></th>
+                            <th class="colHead colA">Event ID</th> 
+                            <th class="colHead colB">Event Title</th> 
+                            <th class="colHead colA">Event Description</th>
+                            <th class="colHead colB">Date</th>
+                            <th class="colHead colA">Time</th>
+                            <th class="colB"></th>
+                            <th class="colA"></th>
                         </tr> 
                     </thead>  
                     <tbody class="label-form">
@@ -52,13 +53,13 @@
                                 $id = $row['Event_ID'];
                         ?>
                         <tr>
-                            <td class="elemCenter"><?php echo $id ?></td>
-                            <td><?php echo $row['Event_Title'] ?></td>
-                            <td><?php echo $row['Event_Description'] ?></td>
-                            <td class="elemCenter"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
-                            <td class="elemCenter"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
-                            <td><a class="toUpdate" href="updateEvent.php?event_id=<?php echo $id; ?>">Edit Event</a></td>
-                            <td><a class="toUpdate" href="deleteEvent.php?event_id=<?php echo $id ?>">Delete Event</a></td>
+                            <td class="elemCenter colA"><?php echo $id ?></td>
+                            <td class="colB"><?php echo $row['Event_Title'] ?></td>
+                            <td class="colA"><?php echo $row['Event_Description'] ?></td>
+                            <td class="elemCenter colB"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
+                            <td class="elemCenter colA"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
+                            <td class="colB"><a class="btn toUpdate" href="updateEvent.php?event_id=<?php echo $id; ?>">Edit Event</a></td>
+                            <td class="colA"><a class="btn toUpdate" href="deleteEvent.php?event_id=<?php echo $id ?>">Delete Event</a></td>
                         </tr>
                         <?php endwhile;?>
                     </tbody>         
@@ -67,18 +68,18 @@
         </div>
 
         <!-- display all available events -->
-        <div class="centerHorizontallyDiv1 form-bg shadow-box marginTop">
+        <div class="right-child centerHorizontallyDiv1 form-bg shadow-box marginTop">
             <h2 class="tableTitle">List of Available Events</h2> 
             <div>
                 <table id="tblEventsDashboard" cellspacing="0" width="100%"> 
                     <thead class="label-form">
                         <tr> 
-                            <th class="colHead">Event Title</th> 
-                            <th class="colHead">Event Description</th>
-                            <th class="colHead">Date</th>
-                            <th class="colHead">Time</th>
-                            <th class="colHead">Event Host ID</th>
-                            <th></th>
+                            <th class="colHead colA">Event Title</th> 
+                            <th class="colHead colB">Event Description</th>
+                            <th class="colHead colA">Date</th>
+                            <th class="colHead colB">Time</th>
+                            <th class="colHead colA">Event Host ID</th>
+                            <th class="colB"></th>
                         </tr> 
                     </thead>  
                     <tbody class="label-form">
@@ -87,20 +88,24 @@
                                 $id = $row['Event_ID'];
                         ?>
                         <tr>
-                            <td><?php echo $row['Event_Title'] ?></td>
-                            <td><?php echo $row['Event_Description'] ?></td>
-                            <td class="elemCenter"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
-                            <td class="elemCenter"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
-                            <td class="elemCenter"><?php echo $row['Host_ID'] ?></td>
+                            <td class="colA"><?php echo $row['Event_Title'] ?></td>
+                            <td class="colB"><?php echo $row['Event_Description'] ?></td>
+                            <td class="elemCenter colA"><?php echo date('F j, Y', strtotime($row['Event_Date'])) ?></td>
+                            <td class="elemCenter colB"><?php echo date('g:i a', strtotime($row['Event_Time'])) ?></td>
+                            <td class="elemCenter colA"><?php echo $row['Host_ID'] ?></td>
                             <!-- displays "Join Event" button when event's Host_ID is different than the currentuser id -->
+                            <td class="colB">
                             <?php if($current_user['userid'] != $row['Host_ID']) { ?>
-                                <td><a class="toUpdate" href="#">Join Event</a></td>
+                                <a class="btn toUpdate" href="#">Join Event</a>
                             <?php } ?>
+                            </td>
                         </tr>
                         <?php endwhile;?>
                     </tbody>         
                 </table>
             </div>
+        </div>
+
         </div>
 
         <!-- display all users -->

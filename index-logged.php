@@ -136,8 +136,9 @@
       </div>
 
 
+      <div class="bday-month-sections">
       <!-- Birth Month Statistics -->
-      <div class="birth-month-stats">
+      <div class="bday-month-stats">
         <h2>Birth Month Statistics (in milions)</h2>
         <table id="tblBirthMonthStat" cellspacing="5" width="100%"> 
           <thead class="label-form">
@@ -162,6 +163,12 @@
         </table>
       </div>
 
+      <div class="bday-month-pie-chart">
+        <h2>Birthday Month Pie Chart (in millions)</h2>
+        <center><canvas id="bdayMonthPieChart" width="300" height="300"></canvas></center>
+      </div>
+
+      </div>
 
     </section>
   </div>
@@ -209,6 +216,58 @@
       maintainAspectRatio: false,
       aspectRatio: 1
     }
+  });
+
+  // Get data from PHP and format it for Chart.js
+  var months = [];
+  var users = [];
+  <?php
+  for ($i = 1; $i <= 12; $i++) {
+      $monthName = date('F', mktime(0, 0, 0, $i, 1));
+      $totalUsers = $birthMonthData[$i];
+      echo "months.push('$monthName');";
+      echo "users.push($totalUsers);";
+  }
+  ?>
+
+  var colors = [
+  'rgb(255, 99, 132)',
+  'rgb(255, 159, 64)',
+  'rgb(255, 205, 86)',
+  'rgb(75, 192, 192)',
+  'rgb(54, 162, 235)',
+  'rgb(153, 102, 255)',
+  'rgb(255, 99, 132)',
+  'rgb(255, 159, 64)',
+  'rgb(255, 205, 86)',
+  'rgb(75, 192, 192)',
+  'rgb(54, 162, 235)',
+  'rgb(153, 102, 255)'
+  ];
+
+  // Create pie chart using Chart.js
+  var ctx = document.getElementById('bdayMonthPieChart').getContext('2d');
+  var birthMonthChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: months,
+          datasets: [{
+              label: 'Birth Month Statistics',
+              data: users,
+              backgroundColor: colors,
+              borderColor: colors,
+              borderWidth: 1,
+              hoverOffset: 4
+          }]
+      },
+      options: {
+        legend: {
+          display: true,
+          position: 'bottom'
+        },
+          responsive: true,
+          maintainAspectRatio: false
+      }
   });
 
 </script>

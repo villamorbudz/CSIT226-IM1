@@ -1,7 +1,11 @@
 <?php
 include('getUser.php');
 include('connect.php');
-include('includes/header.php');
+if($current_user['usertype']=='ADMIN') {
+    include('includes/headerAdmin.php');
+}else{
+    include('includes/header.php');
+}
 include('includes/footer.php');
 include('includes/imports.php');
 
@@ -34,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } elseif (isset($_POST['delete_confirmed']) && $_POST['delete_confirmed'] == 'true') {
         // Handle account deletion
-        $query = "DELETE FROM tbluseraccount WHERE acctid='$current_user[userid]'";
+        $query = "UPDATE tbluseraccount SET active='0' WHERE acctid='$current_user[userid]'";
 
         if (mysqli_query($connection, $query)) {
             // Destroy the session and redirect to the home page
@@ -88,7 +92,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             <input type="hidden" name="confirmed" id="confirmed" value="false">
             <input type="hidden" name="delete_confirmed" id="delete_confirmed" value="false">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmModal">Update</button>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete Account</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Deactivate Account</button>
         </form>
     </div>
 
@@ -122,17 +126,17 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                    <h5 class="modal-title" id="deleteModalLabel">Confirm Account Deactivation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to delete your account? This action cannot be undone.
+                    Are you sure you want to deactivate your account? To reactive your account, you need to contact an Admin.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger" id="deleteConfirmBtn">Yes, Delete</button>
+                    <button type="button" class="btn btn-danger" id="deleteConfirmBtn">Yes, Deactivate</button>
                 </div>
             </div>
         </div>
