@@ -4,6 +4,7 @@ include('imports.php');
 
 <head>
     <link rel="stylesheet" href="css/header.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
@@ -36,9 +37,9 @@ include('imports.php');
                             Profile
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><a class="dropdown-item" href="account.php">Account</a></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="index.php">Log Out</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Log Out</a></li>
                         </ul>
                     </div>
                 </li>
@@ -46,3 +47,28 @@ include('imports.php');
         </div>
     </div>
 </nav>
+
+<!-- Logout Confirmation Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to log out?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <a href="index.php" class="btn btn-primary">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

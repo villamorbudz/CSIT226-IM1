@@ -14,4 +14,82 @@ body {
 .welcome-message {
   color: white;
   font-size: 60px;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.welcome-message-no-space {
+  color: white;
+  font-size: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+table, h2, .total {
+  color: white;
+}
+
+h2 {
+  padding-top: 50px;
+}
+
+.tableTitle {
+  text-align: center;
+}
+
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.colHead {
+  padding: 5px; /* Adjust the padding as needed */
+}
+
+.elemCenter {
+  padding: 5px; /* Adjust the padding as needed */
+}
+
+
+.PageContent {
+  width: 80%;
+  flex-grow: 1; /* Grow to fill remaining vertical space */
+}
+
+.total-users, .gender-stats, .pie-chart-container {
+  margin-bottom: 20px;
+}
+
+.total-users h2, .gender-stats h2, .pie-chart-container h2 {
+  margin-bottom: 10px;
+}
+
+.total-users {
+  margin-top: 20px; /* Add some top margin */
+}
+
+.total-users p {
+  font-size: 24px;
+}
+
+.tableTitle {
+  text-align: center;
+}
+
+.gender-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-stats,
+.gender-pie-chart {
+  flex-basis: 48%; /* Adjust as needed */
+}
+
+footer {
+  margin-top: auto; /* Push footer to the bottom */
 }
