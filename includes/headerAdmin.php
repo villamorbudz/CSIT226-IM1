@@ -50,6 +50,7 @@ include('imports.php');
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <li><a class="dropdown-item" href="account.php">Account</a></li>
+                                <li><a class="dropdown-item" href="reactivation.php">Reactivate Requests</a></li>
                                 <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Log Out</a></li>
                             </ul>
                         </div>

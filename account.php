@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Destroy the session and redirect to the home page
             session_destroy();
             echo "<script>
-                    alert('Account deleted successfully');
+                    alert('Account deactivated successfully');
                     window.location.href = 'index.php';
                   </script>";
             // Make sure the script stops after the redirection
@@ -92,7 +92,9 @@ if ($result && mysqli_num_rows($result) > 0) {
             <input type="hidden" name="confirmed" id="confirmed" value="false">
             <input type="hidden" name="delete_confirmed" id="delete_confirmed" value="false">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmModal">Update</button>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Deactivate Account</button>
+            <?php if($current_user['usertype'] != 'ADMIN'): ?>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Deactivate Account</button>
+            <?php endif; ?>
         </form>
     </div>
 

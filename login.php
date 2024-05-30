@@ -74,8 +74,13 @@
                         <?php } ?>
                     </div>
                     <div class="bottom-wrapper">
-                        <a class="box-form" href="index.php">&lt Back</a>
+                        <a id="btn" class="box-form" href="index.php">&lt Back</a>
                         <input class="box-form" type="submit" name="btnLogin" value="Login">
+                        <?php if (isset($errLogIn) && !empty($errLogIn)) { ?>
+                            <?php if ($errLogIn == "Account trying to access is deactivated. Please compile a request to the admin to reactivate your account.") { ?>
+                                <a id="btn" class="box-form" href="requestReactivation.php">Request Reactivation</a>
+                            <?php } ?>
+                        <?php } ?>
                     </div>
                 </form>
             </div>
