@@ -1,0 +1,125 @@
+.bgCustom {
+    background-color: #121212;
+}
+
+.center-div {
+    align-items: center;
+    align-content: center;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.bottom-wrapper {
+    position: absolute;
+    bottom: 10px;
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+
+.flex-wrapper-column {
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    margin: 0px 5px;
+}
+
+#registration {
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+#back-button {
+    margin: 0px 10px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.div-center {
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.left-child, .right-child {
+    flex: 1;
+    margin: 10px;
+    padding: 20px 50px;
+}
+
+.left-child {
+    max-width: 40%;
+}
+
+#spanWebName {
+    color: rgb(0, 201, 0) ;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+#spanHostName {
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.form-bg {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.form-bg1 {
+    background-color: white;
+    color: black;
+}
+
+.marginTop1 {   
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.childTitle {
+    padding: 0px;
+    padding-bottom: 30px;
+}
+
+#eventDetails > a {
+    color: white ;
+    background-color: rgb(255, 0, 0) ;
+    align-content: center;
+    vertical-align: middle;
+}
+
+#eventDetails > a:hover {
+    color: rgb(255, 0, 0) ;
+    background-color: white ;
+}
+
+#btnContact {
+    color: white ;
+    background-color: rgb(0, 201, 0);
+    align-content: center;
+    vertical-align: middle;
+}
+
+#btnContact:hover {
+    color: rgb(0, 201, 0) ;
+    background-color: white ;
+}
